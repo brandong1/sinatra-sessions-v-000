@@ -54,6 +54,7 @@ class App < Sinatra::Base
 
   get '/logout' do
     #session.clear works too
+    #session = {} is what .clear method does
     session[:id].clear
     "Session has now been cleared. session content: #{session.inspect}. Continue on to the '/finish' line!"
   end
